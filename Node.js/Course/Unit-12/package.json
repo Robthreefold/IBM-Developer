@@ -13,7 +13,9 @@
     "start-dev": "npm run pre-run && nodemon --verbose -e js,pug,css,json ./bin/www",
     "start-dev-inspect": "npm run pre-run && nodemon --inspect --verbose -e js,pug,css,json ./bin/www",
     "start-mongod": "mongod --dbpath ~/home/mongodb-data/shoppingList/",
-    "test": "npm run pre-run && mocha ./test/test-rest-services"
+    "test": "npm run pre-run && mocha ./test/test-rest-services",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "bugs": {
     "url": "https://github.com/jstevenperry/IBM-Code/issues"
@@ -28,19 +30,20 @@
     "npm"
   ],
   "dependencies": {
-    "async": "^2.6.1",
+    "async": "^2.6.4",
     "cookie-parser": "~1.4.3",
     "dateformat": "^3.0.3",
     "debug": "~2.6.9",
     "express": "~4.16.0",
-    "express-validator": "^5.3.0",
+    "express-validator": "^6.5.0",
     "http-errors": "~1.6.2",
-    "log4js": "^3.0.2",
-    "mongodb": "^3.1.1",
-    "mongoose": "^5.7.5",
-    "morgan": "~1.9.0",
-    "pug": "^2.0.0",
-    "sqlite3": "^4.0.2"
+    "log4js": "^6.4.0",
+    "mongodb": "^3.1.13",
+    "mongoose": "^5.13.9",
+    "morgan": "~1.9.1",
+    "pug": "^3.0.1",
+    "sqlite3": "^5.0.3",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",
@@ -80,5 +83,6 @@
   },
   "eslintIgnore": [
     "node_modules"
-  ]
+  ],
+  "snyk": true
 }
