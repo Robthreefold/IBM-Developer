@@ -28,7 +28,7 @@
     "npm"
   ],
   "dependencies": {
-    "@cloudant/cloudant": "^2.3.0",
+    "@cloudant/cloudant": "^4.5.1",
     "async": "^2.6.1",
     "cookie-parser": "~1.4.3",
     "dateformat": "^3.0.3",
